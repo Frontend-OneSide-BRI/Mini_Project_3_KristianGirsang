@@ -1,17 +1,13 @@
-import { useState, useEffect } from "react";
-import { fetchDataFromApi } from "./helper/api";
+import React from "react";
+import MoviePage from "./pages/movies/movies";
+import "tailwindcss/tailwind.css";
 
-function App() {
-  useEffect(() => {
-    apiTesting();
-  }, []);
-  const apiTesting = () => {
-    fetchDataFromApi("/movie/popular").then((result) => {
-      console.log(result);
-    });
-  };
-
-  return <div>APP</div>;
-}
+const App = () => {
+  return (
+    <div>
+      <MoviePage />
+    </div>
+  );
+};
 
 export default App;
