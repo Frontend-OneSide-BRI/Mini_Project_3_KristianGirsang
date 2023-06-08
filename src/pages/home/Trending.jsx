@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import MovieCard from "../../components/molecules/card/movieCard";
 import ContentWrapper from "../../components/molecules/contentWrapper/ContentWrapper";
 import SwitchTabs from "../../components/atoms/switchTabs/SwitchTabs";
 import useFetch from "../../hooks/useFetch";
@@ -19,6 +19,7 @@ const Trending = () => {
         <span className="text-2xl text-white font-normal">Trending</span>
         <SwitchTabs data={["Day", "Week"]} onTabChange={onTabChange} />
       </ContentWrapper>
+      <MovieCard data={data?.results} loading={loading} />
     </div>
   );
 };
