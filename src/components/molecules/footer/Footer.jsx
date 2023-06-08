@@ -8,7 +8,6 @@ import {
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 
-import "./index.css";
 
 const Footer = () => {
   return (
@@ -31,7 +30,7 @@ const Footer = () => {
             FAQ
           </li>
         </ul>
-        
+
         <div className="flex items-center justify-center gap-2">
           <span className="w-12 h-12 rounded-full bg-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-pink hover:text-pink">
             <FaFacebookF />
