@@ -27,7 +27,7 @@ const HeroBanner = () => {
   };
 
   return (
-    <div className="w-full h-[450px] md:h-[700px] flex bg-[#04152d] items-center top-0 absolute">
+    <div className="relative w-full h-[700px] md:h-screen">
       {!loading && (
         <div className="w-full h-full top-0 left-0 opacity-50 absolute overflow-hidden">
           <Img
@@ -38,7 +38,7 @@ const HeroBanner = () => {
       )}
       <div className="w-full h-[300px] bg-gradient-to-t from-[#04152d] to-transparent absolute bottom-0 left-0"></div>
       <ContentWrapper>
-        <div className="flex flex-col items-center text-white text-center relative max-w-800 mx-auto">
+        <div className="flex flex-col items-center text-white text-center  max-w-800 mx-auto">
           <span className="title text-4xl font-bold mb-2 md:mb-0 md:text-7xl">
             Hello, friend.
           </span>
