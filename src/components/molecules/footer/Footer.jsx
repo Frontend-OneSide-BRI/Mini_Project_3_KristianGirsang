@@ -11,9 +11,9 @@ import ContentWrapper from "../contentWrapper/ContentWrapper";
 
 const Footer = () => {
   return (
-    <footer className="bg-black3 py-10">
-      <ContentWrapper>
-        <ul className="flex items-center justify-center gap-4 md:gap-8 mb-5 md:mb-8">
+    <footer className="bg-[#020c1b] py-10">
+      <ContentWrapper className={`flex-col relative md:flex-row`}>
+        <ul className="flex text-white items-center justify-center gap-4 md:gap-8 mb-5 md:mb-8">
           <li className="transition-all duration-300 cursor-pointer text-xs md:text-base hover:text-pink">
             Terms Of Use
           </li>
