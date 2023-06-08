@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import ContentWrapper from "../../components/molecules/contentWrapper/ContentWrapper";
-import SwitchTabs from "../../components/molecules/switchTabs/SwitchTabs";
+import SwitchTabs from "../../components/atoms/switchTabs/SwitchTabs";
 import useFetch from "../../hooks/useFetch";
 
 const Trending = () => {
