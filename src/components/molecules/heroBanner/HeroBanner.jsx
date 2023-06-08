@@ -34,9 +34,9 @@ const HeroBanner = () => {
             className={`w-full h-full object-cover object-center block`}
             src={background}
           />
-          <div className="w-full h-[300px] bg-gradient-to-t from-[#04152d] to-transparent absolute bottom-0 left-0"></div>
         </div>
       )}
+      <div className="w-full h-[300px] bg-gradient-to-t from-[#04152d] to-transparent absolute bottom-0 left-0"></div>
       <ContentWrapper>
         <div className="flex flex-col items-center text-white text-center relative max-w-800 mx-auto">
           <span className="title text-4xl font-bold mb-2 md:mb-0 md:text-7xl">
