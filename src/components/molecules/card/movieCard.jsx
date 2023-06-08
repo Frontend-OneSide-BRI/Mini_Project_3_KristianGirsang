@@ -81,7 +81,7 @@ const MovieCard = ({ data, loading, endpoint, title }) => {
                       className={`relative top-0 left-0 w-full h-full rounded-lg`}
                       src={posterUrl}
                     />
-                    <Rating  rating={item.vote_average.toFixed(1)} />
+                    <Rating rating={item.vote_average.toFixed(1)} />
                     <Genres data={item.genre_ids.slice(0, 2)} />
                   </div>
                   <div className="text-white flex flex-col">
@@ -99,7 +99,7 @@ const MovieCard = ({ data, loading, endpoint, title }) => {
             })}
           </div>
         ) : (
-          <div className="loadingSkeleton">
+          <div className="flex gap-[10px] overflow-y-hidden mr-[-20px] ml-[-20px] px-[20px] md:gap-[20px] md:overflow-hidden md:m-0 md:p-0">
             {skItem()}
             {skItem()}
             {skItem()}
