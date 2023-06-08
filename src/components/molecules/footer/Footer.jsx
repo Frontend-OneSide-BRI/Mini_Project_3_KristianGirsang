@@ -12,34 +12,37 @@ import "./index.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="bg-black3 py-10">
       <ContentWrapper>
-        <ul className="menuItems">
-          <li className="menuItem">Terms Of Use</li>
-          <li className="menuItem">Privacy-Policy</li>
-          <li className="menuItem">About</li>
-          <li className="menuItem">Blog</li>
-          <li className="menuItem">FAQ</li>
+        <ul className="flex items-center justify-center gap-4 md:gap-8 mb-5 md:mb-8">
+          <li className="transition-all duration-300 cursor-pointer text-xs md:text-base hover:text-pink">
+            Terms Of Use
+          </li>
+          <li className="transition-all duration-300 cursor-pointer text-xs md:text-base hover:text-pink">
+            Privacy-Policy
+          </li>
+          <li className="transition-all duration-300 cursor-pointer text-xs md:text-base hover:text-pink">
+            About
+          </li>
+          <li className="transition-all duration-300 cursor-pointer text-xs md:text-base hover:text-pink">
+            Blog
+          </li>
+          <li className="transition-all duration-300 cursor-pointer text-xs md:text-base hover:text-pink">
+            FAQ
+          </li>
         </ul>
-        <div className="infoText">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </div>
-        <div className="socialIcons">
-          <span className="icon">
+        
+        <div className="flex items-center justify-center gap-2">
+          <span className="w-12 h-12 rounded-full bg-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-pink hover:text-pink">
             <FaFacebookF />
           </span>
-          <span className="icon">
+          <span className="w-12 h-12 rounded-full bg-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-pink hover:text-pink">
             <FaInstagram />
           </span>
-          <span className="icon">
+          <span className="w-12 h-12 rounded-full bg-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-pink hover:text-pink">
             <FaTwitter />
           </span>
-          <span className="icon">
+          <span className="w-12 h-12 rounded-full bg-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:shadow-pink hover:text-pink">
             <FaLinkedin />
           </span>
         </div>
