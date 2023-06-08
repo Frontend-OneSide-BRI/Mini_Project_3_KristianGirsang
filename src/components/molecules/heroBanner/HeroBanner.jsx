@@ -8,7 +8,7 @@ import ContentWrapper from "../contentWrapper/ContentWrapper";
 
 const HeroBanner = () => {
   const [background, setBackground] = useState("");
-  const [query, setQuery] = useState("");
+  const [query, setQUery] = useState("");
   const navigate = useNavigate();
   const { url } = useSelector((state) => state.home);
   const { data, loading } = useFetch("/movie/upcoming");
@@ -28,21 +28,24 @@ const HeroBanner = () => {
 
   return (
     <div>
-      {!loading && <Img src={background} />}
+      {!loading && (
+        <div>
+          <Img src={background} />
+        </div>
+      )}
+      <div></div>
       <ContentWrapper>
         <div>
+          <span>Hello, friend.</span>
+          <span>Find a millions of movies and Shows here. </span>
           <div>
-            <span>Hello, friend.</span>
-            <span>Find millions of movies and shows here.</span>
-            <div>
-              <input
-                type="text"
-                placeholder="Search for a movie or show..."
-                onChange={(e) => setQuery(e.target.value)}
-                onKeyUp={searchHandler}
-              />
-              <button>Search</button>
-            </div>
+            <input
+              type="text"
+              placeholder="Search for a movie or show..."
+              onChange={(e) => setQUery(e.target.value)}
+              onKeyUp={searchHandler}
+            />
+            <button>Search</button>
           </div>
         </div>
       </ContentWrapper>
