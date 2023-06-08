@@ -11,6 +11,7 @@ import Genres from "../genre/Genre";
 import Rating from "../../atoms/rating/Rating";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../lazyLoadImages/Img";
+import "../../../index.css";
 
 const MovieCard = ({ data, loading, endpoint, title }) => {
   const carouselContainer = useRef();

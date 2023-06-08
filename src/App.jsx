@@ -35,26 +35,21 @@ const App = () => {
   };
 
   const genresCall = async () => {
-    try {
-      const endPoints = ["tv", "movie"];
-      const allGenres = {};
+    let promises = [];
+    let endPoints = ["tv", "movie"];
+    let allGenres = {};
 
-      const promises = endPoints.map((url) =>
-        fetchDataFromApi(`/genre/${url}/list/`)
-      );
+    endPoints.forEach((url) => {
+      promises.push(fetchDataFromApi(`/genre/${url}/list/`));
+    });
 
-      const responses = await Promise.all(promises);
+    const data = await Promise.all(promises);
+    console.log(data);
+    data.map(({ genres }) => {
+      return genres.map((item) => (allGenres[item.id] = item));
+    });
 
-      responses.forEach(({ genres }) => {
-        genres.forEach((genre) => {
-          allGenres[genre.id] = genre;
-        });
-      });
-
-      dispatch(getGenres(allGenres));
-    } catch (error) {
-      console.error("Failed to fetch genres:", error);
-    }
+    dispatch(getGenres(allGenres));
   };
 
   return (
@@ -63,6 +58,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/:mediaType/:id" element={<Details/>} />
         <Route path="/search/:query" element={<SearchResult />} />
       </Routes>
       <Footer />

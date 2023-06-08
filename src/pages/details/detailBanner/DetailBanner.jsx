@@ -9,6 +9,7 @@ import Genres from "../../../components/molecules/genre/Genre";
 import Img from "../../../components/molecules/lazyLoadImages/Img";
 import Rating from "../../../components/atoms/rating/Rating";
 import { PlayIcon } from "../../../components/atoms/playButton/PlayButton";
+import PosterFallback from "../../../assets/no-poster.png";
 import "../../../index.css";
 
 const DetailsBanner = ({ video, crew }) => {
